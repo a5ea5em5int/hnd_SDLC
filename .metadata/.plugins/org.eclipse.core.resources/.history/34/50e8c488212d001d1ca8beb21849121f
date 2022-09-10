@@ -1,0 +1,13 @@
+package com.software.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.software.demo.entity.Product;
+import com.software.demo.entity.User;
+
+@Service
+public interface CartItemInterface {
+	
+	void saveCartItem(Product p, User u, int qty);
+
+}

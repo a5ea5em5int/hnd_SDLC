@@ -1,0 +1,49 @@
+package com.software.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.software.demo.entity.CartItem;
+import com.software.demo.entity.Product;
+import com.software.demo.entity.User;
+import com.software.demo.repo.ProductRepo;
+import com.software.demo.repo.UserRepo;
+import com.software.demo.service.CartItemInterface;
+
+@Controller
+public class CartItemController {
+	
+	@Autowired
+	private CartItemInterface cinface;
+	@Autowired
+	private ProductRepo productRepo;
+	@Autowired
+	private UserRepo userRepo;
+	
+	@GetMapping("/showform")
+	public String showForm(Model model)
+	{	model.addAttribute("cartitem", new CartItem());
+		List<User> users = userRepo.findAll();
+		List<Product> products = productRepo.findAll();
+		System.out.print("*****************************************"+users.size());
+		System.out.print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+products.size());
+		model.addAttribute("products", products);
+		model.addAttribute("users", users);
+		return "cart_item";
+		
+	}
+	
+	@PostMapping("/cartitems/save")
+	public String saveItem(CartItem item)
+	{	cinface.saveCartItem(item);
+		return "hello";
+		
+	}
+	
+
+}

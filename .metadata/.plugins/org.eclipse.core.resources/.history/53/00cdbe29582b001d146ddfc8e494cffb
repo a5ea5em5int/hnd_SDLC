@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body{
+	
+	display:100%;
+	background-image:linear-gradient(white,blue);
+	
+	overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+	
+}

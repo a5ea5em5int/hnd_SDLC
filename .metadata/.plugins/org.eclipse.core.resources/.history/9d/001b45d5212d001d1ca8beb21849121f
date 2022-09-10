@@ -1,0 +1,20 @@
+package com.software.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.software.demo.entity.CartItem;
+import com.software.demo.entity.Product;
+import com.software.demo.entity.User;
+
+@Service
+public class CartItemService implements CartItemInterface {
+
+	
+
+	@Override
+	public void saveCartItem(CartItem cartitem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

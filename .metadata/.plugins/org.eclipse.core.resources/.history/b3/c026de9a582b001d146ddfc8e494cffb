@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>[[title]]</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/decor.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" th:href="@{/categories/newform}">Insert</a>
+      <a class="nav-item nav-link" th:href="@{/categories}">Show All Categories</a>
+      <a class="nav-item nav-link" href="#">About</a>
+    </div>
+  </div>
+</nav>
+	<div class="container">
+	<div class="row h-100" >
+	
+			<div class="col-md-3 h-100 p-3" >hi hi</div>
+			<div class="col-md-9 h-100 p-3">
+			
+			<table class="table table-striped">
+			<tr>
+			<th>ID
+			</th>
+			<th>Name
+			</th>
+			</tr>
+			<tr th:each="category: ${categories}">
+			
+				<td th:text="${category.id}">
+				<td th:text="${category.name}">
+				
+			
+			
+			</tr>
+			
+			
+			
+			</table>
+			
+			
+			 </div>
+	
+	</div>
+	
+	
+	</div>
+
+</body>
+</html>

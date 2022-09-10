@@ -1,0 +1,5 @@
+package com.software.demo.repo;
+
+public interface ProductRepo extends JpaRepository<Product,Integer> {
+
+}

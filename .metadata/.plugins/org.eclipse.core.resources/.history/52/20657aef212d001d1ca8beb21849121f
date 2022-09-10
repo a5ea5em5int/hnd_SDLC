@@ -1,0 +1,22 @@
+package com.software.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.software.demo.entity.CartItem;
+import com.software.demo.entity.Product;
+import com.software.demo.entity.User;
+import com.software.demo.repo.CartItemRepo;
+
+@Service
+public class CartItemService implements CartItemInterface {
+
+	@Autowired
+	private CartItemRepo cartRepo;
+
+	@Override
+	public void saveCartItem(CartItem cartitem) {
+		cartRepo.		
+	}
+
+}

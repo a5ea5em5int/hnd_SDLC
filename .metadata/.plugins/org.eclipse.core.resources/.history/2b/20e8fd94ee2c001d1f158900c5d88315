@@ -1,0 +1,25 @@
+package com.software.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.software.demo.Brand;
+import com.software.demo.repo.BrandRepository;
+@Service
+public class BrandServiceImpl implements BrandService{
+	@Autowired
+	private BrandRepository brandRepo;
+	@Override
+	public void saveNewBrand(Brand brand) {
+	brandRepo.save(brand);
+	}
+
+	@Override
+	public List<Brand> showAllBrand() {
+		List<Brand> brands = brandRepo.findAll();
+		return brands;
+	}
+
+}

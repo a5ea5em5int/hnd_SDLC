@@ -1,0 +1,24 @@
+package com.software.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.software.demo.entity.Category;
+import com.software.demo.entity.Product;
+import com.software.demo.repo.CategoryRepo;
+
+public class CategoryServiceImpl implements CategoryService {
+	
+	@Autowired
+	private CategoryRepo categoryRepo;
+
+	@Override
+	public List<Category> findAllCategories() {
+		
+		List<Category> categories = categoryRepo.findAll();
+		return categories;
+		
+	}
+
+}

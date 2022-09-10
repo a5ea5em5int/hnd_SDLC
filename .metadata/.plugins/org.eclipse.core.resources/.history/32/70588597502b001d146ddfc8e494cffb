@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body{
+	
+	display:100%;
+	background-image:url("/img/download.jfif");
+	background-repeat:no-repeat;
+	
+}

@@ -1,0 +1,15 @@
+package com.software.demo.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ProductController {
+	
+	
+	@GetMapping("/")
+	public String hello()
+	{
+		return "hello";
+	}
+
+}

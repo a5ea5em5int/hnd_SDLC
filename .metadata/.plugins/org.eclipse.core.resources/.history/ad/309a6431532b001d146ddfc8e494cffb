@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+body{
+	
+	display:100%;
+	background-image:linear-gradient(pink,gray);
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+}
